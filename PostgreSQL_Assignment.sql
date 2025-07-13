@@ -1,13 +1,3 @@
--- Active: 1752404142016@@127.0.0.1@5432@conservation_db
-SELECT * FROM rangers;
-
-SELECT * FROM species;
-
-SELECT * FROM sightings;
-
-DROP TABLE sightings;
-
-
 CREATE TABLE rangers (
     ranger_id SERIAL PRIMARY KEY,
     name VARCHAR(100),
@@ -55,8 +45,6 @@ INSERT INTO sightings (species_id, ranger_id, location, sighting_time, notes) VA
 -- Problem 1,
 INSERT INTO rangers (name, region) 
 VALUES ('Derek Fox', 'Coastal Plains');
-
-
 
 
 -- Problem 2,
