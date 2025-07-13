@@ -78,3 +78,33 @@ SELECT * FROM sightings LIMIT 5 OFFSET 10;
 এখানে প্রথম ১০টি রো বাদ দিয়ে পরের ৫টি রো দেখাবে।
 
 Pagination বা পেজভিত্তিক ওয়েবসাইটে ডেটা ভাগ করে দেখানোর জন্য LIMIT ও OFFSET খুবই দরকারী।
+
+---
+
+## How can you calculate aggregate functions like COUNT(), SUM(), and AVG() in PostgreSQL?
+
+Aggregate ফাংশনগুলো ডাটাবেজের একটি কলামের উপরে গাণিতিক অপারেশন করে দেয়।
+
+COUNT(): কতগুলো রো আছে তা গণনা করে। উদাহরণ:
+
+```sql
+SELECT COUNT(*) FROM sightings;
+```
+
+এটি মোট সাইটিংসের সংখ্যা দিবে।
+
+SUM(): একটি সংখ্যাসূচক কলামের মোট যোগফল নির্ণয় করে। উদাহরণ:
+
+```sql
+SELECT SUM(age) FROM rangers;
+```
+
+এটি সকল রেঞ্জারের বয়সের যোগফল দিবে।
+
+AVG(): একটি সংখ্যাসূচক কলামের গড় মান নির্ণয় করে। উদাহরণ:
+
+```sql
+SELECT AVG(age) FROM rangers;
+```
+
+এটি সকল রেঞ্জারের গড় বয়স দিবে।
